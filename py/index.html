@@ -8,8 +8,8 @@
 </head>
 <body>
     <script src="main.js"></script>
-    <button id="exe">execute</button>
-    <button id="inst">collect modules (mpip)</button> <br><br>
+    <button id="exe" onclick="runPython()">execute</button>
+    <button id="inst" onclick="installPackages()">collect modules (mpip)</button> <br><br>
     <textarea class="consol" id="input"></textarea>
     <textarea class="consol" id="modcollect">Delete this before adding modules:
     instructions: please enter the requested modules into this box seperated by a space, then press 'collect modules' then you may input them, and use them when pressing execute in the main box. please remember this enviornment doesn't have internet access OR a graphical interface. For these functions there are other great solutions that don't run locally such as REPL.IT, google collabs, OR a local run but no GUI copy.sh virtual emulator. you can find links to these at the bottom of the page.</textarea><br>
