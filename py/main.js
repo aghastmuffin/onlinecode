@@ -94,8 +94,8 @@ async function installPackages() {
 }
 
 // Add event listener to execute button
-document.getElementById('exe').addEventListener('click', runPython);
-document.getElementById('inst').addEventListener('click', installPackages);
+document.getElementById('exe').addEventListener('click', runPython());
+document.getElementById('inst').addEventListener('click', installPackages());
 
 // Initialize Pyodide on load
 initPyodide();
