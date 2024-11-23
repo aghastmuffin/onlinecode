@@ -100,4 +100,4 @@ document.getElementById('inst').addEventListener('click', installPackages);
 // Initialize Pyodide on load
 initPyodide();
 
-export { runPython };
+//export { runPython };
