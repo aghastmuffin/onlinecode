@@ -10,10 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return module.loadPyodide;
         }
     }
-    async function getcookie(){
-        const mcookie = await import('https://esm.sh/js-cookie@3.0.5');
-        let Cookies;
-    }
     let pyodide;
     async function initPyodide() {
         const loadPyodide = await getPyodide();
@@ -83,28 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add event listeners - only call functions when buttons are clicked
-    
-    async function update_cookie(){
-        try{
-            Cookies.set('lazy', `${ document.getElementById('lazyload').checked}`)
-        }
-        catch (err){
-            if (Cookies.get('lazy') === undefined){
-                console.log('undef: gen new');
-                Cookies.set('lazy', true)
-            } else{
-                if (Cookies.get('lazy') === false){
-                    document.getElementById('lazyload').checked = false;
-        
-                } else{
-                    document.getElementById('lazyload').checked = true;
-                    await initPyodide();
-                }
-            }
-        }
-    }
-    update_cookie()
-    document.getElementById('lazyload').addEventListener('change', update_cookie)
     document.getElementById('exe').addEventListener('click', runPython);
     document.getElementById('inst').addEventListener('click', installPackages);
 });
